@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap");
+@import "tailwindcss";
+@plugin "daisyui";
+
+html {
+  font-family: "Fira Code", monospace;
+}
+
+.background {
+  background-color: #0a0f1c;
+}
+.primary {
+  color: #e4f0fb;
+}
+.accent {
+  color: #f973c5;
+}

@@ -1,0 +1,99 @@
+[
+    {
+        "id": 1,
+        "projecttittle": "InnerSelf",
+        "images": [
+            "https://i.ibb.co/jktCh6N0/Screenshot-2025-06-30-151307.png",
+            "https://i.ibb.co/nVsrf7C/Screenshot-2025-06-30-151238.png",
+            "https://i.ibb.co/bMCXc8fB/Screenshot-2025-06-30-151149.png"
+        ],
+        "technology": [
+            "ReactJS",
+            "Tailwind CSS",
+            "Firebase Auth",
+            "MongoDB",
+            "ExpressJS",
+            "React Router",
+            "JWT"
+        ],
+        "liveLink": "https://innerself.netlify.app/",
+        "githubClient": "https://github.com/Arpan-Dey-Web/Local-hobby-group-organizer-server",
+        "githubServer": "https://github.com/Arpan-collab/innerself-server",
+        "features": [
+            "🎭 Group Discovery & Creation",
+            "🔐 Protected Routes",
+            "📅 Smart Validation",
+            "🔥 Sleek UI & Responsive Design",
+            "🍃 Theme Toggle",
+            "✨ Enhanced UI Libraries"
+        ],
+        "license": "Educational Use - Crafted by Arpan ❤️"
+    },
+    {
+        "id": 2,
+        "projecttittle": "Restaurant Management Website",
+        "images": [
+            "https://i.ibb.co/sqX7nk5/restaurant-home.png",
+            "https://i.ibb.co/NKVXMmV/restaurant-allfoods.png",
+            "https://i.ibb.co/41xMpqW/restaurant-dashboard.png"
+        ],
+        "technology": [
+            "ReactJS",
+            "Tailwind CSS",
+            "React Router",
+            "Firebase Auth",
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "JWT",
+            "Framer Motion",
+            "TanStack Query"
+        ],
+        "liveLink": "https://your-live-restaurant-site.netlify.app/",
+        "githubClient": "https://github.com/Arpan-collab/restaurant-client",
+        "githubServer": "https://github.com/Arpan-collab/restaurant-server",
+        "features": [
+            "🍽️ Full-featured MERN Stack Food Ordering",
+            "✅ Public & Private Pages",
+            "🎨 Fully Responsive and Themed UI",
+            "🧾 Purchase Restriction Logic (stock, ownership)",
+            "🔍 Search Functionality",
+            "🧠 Smart Routing: No reload errors on Private Routes",
+            "🔥 JWT-secured API with proper credentials",
+            "📦 TanStack Query for State & Data Management",
+            "🧠 Conditional Navigation & Profile Dropdown"
+        ],
+        "license": "Educational Use — Built with ❤️ by Arpan"
+    },
+    {
+        "id": 3,
+        "projecttittle": "Event Explorer Platform",
+        "images": [
+            "https://i.ibb.co/VYyWDxpF/Screenshot-2025-06-30-165506.png",
+            "https://i.ibb.co/XkYnv3Pw/Screenshot-2025-06-30-165435.png"
+        ],
+        "technology": [
+            "React",
+            "Firebase Auth",
+            "Firebase Hosting",
+            "Tailwind CSS",
+            "DaisyUI",
+            "React Router",
+            "Swiper"
+        ],
+        "liveLink": "https://b11-assaignment-9.netlify.app/",
+        "githubClient": "https://github.com/Arpan-Dey-Web/Event-management-project?tab=readme-ov-file",
+        "githubServer": "",
+        "features": [
+            "🎟️ Discover and Reserve Seats for Local Events",
+            "🛡️ Protected Routes: Event Details, Profile, and One Extra Page",
+            "🔁 Auto-login with onAuthStateChanged on Refresh",
+            "🖼️ Home Page: Swiper Slider, Upcoming Events, FAQ Section",
+            "👤 Profile Page: Update Name and Photo via Firebase",
+            "➕ Extra Protected Route with Meaningful Content",
+            "🎨 Fully Responsive Urban-Themed Design",
+            "🌀 AOS Animations, Hover Effects, and Polished Transitions"
+        ],
+        "license": "Educational Use — Crafted by Arpan ❤️"
+    }
+]
