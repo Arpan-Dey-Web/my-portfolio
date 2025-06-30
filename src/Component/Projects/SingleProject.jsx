@@ -102,7 +102,7 @@ const SingleProject = ({ project }) => {
                 <span>💻</span> Client Code
               </a>
             )}
-            {githubServer && (
+            {/* {githubServer && (
               <a
                 href={githubServer}
                 target="_blank"
@@ -111,7 +111,7 @@ const SingleProject = ({ project }) => {
               >
                 <span>🔌</span> Server Code
               </a>
-            )}
+            )} */}
           </div>
         </div>
       </div>
