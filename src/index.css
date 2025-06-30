@@ -2,16 +2,186 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-html {
+html,
+body {
   font-family: "Fira Code", monospace;
 }
 
+/* Background & Base Colors */
 .background {
   background-color: #0a0f1c;
 }
+
 .primary {
-  color: #e4f0fb;
+  color: #4d79ff;
 }
+
 .accent {
-  color: #f973c5;
+  color: #ff2d75;
+}
+
+.text {
+  color: white;
+}
+
+/* Cards & Interactive Elements */
+.card {
+  background: rgba(10, 15, 28, 0.8);
+  border: 1px solid #4d79ff;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 0 15px rgba(77, 121, 255, 0.7);
+}
+
+/* Glow Effects (For Buttons/Headings) */
+.glow {
+  text-shadow: 0 0 8px rgba(77, 121, 255, 0.7);
+}
+
+.glow-hover:hover {
+  box-shadow: 0 0 12px rgba(77, 121, 255, 0.7);
+}
+
+/* Skill Bars */
+.skill-bar {
+  background: rgba(77, 121, 255, 0.2);
+}
+
+.skill-progress {
+  background: #ff2d75;
+  height: 8px;
+  transition: width 0.5s;
+}
+/* ===== Cyberpunk Buttons ===== */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+/* Primary Button (Electric Blue) */
+.btn-primary {
+  background-color: #4d79ff;
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 15px rgba(77, 121, 255, 0.7);
+  transform: translateY(-2px);
+}
+
+/* Accent Button (Hot Pink) */
+.btn-accent {
+  background-color: #ff2d75;
+  color: white;
+  border: none;
+}
+
+.btn-accent:hover {
+  box-shadow: 0 0 15px rgba(255, 45, 117, 0.7);
+  transform: translateY(-2px);
+}
+
+/* Outline Button */
+.btn-outline {
+  background: transparent;
+  color: #4d79ff;
+  border: 2px solid #4d79ff;
+}
+
+.btn-outline:hover {
+  background: rgba(77, 121, 255, 0.1);
+  box-shadow: 0 0 10px rgba(77, 121, 255, 0.5);
+}
+
+/* CTA Button with Pulse Animation */
+.btn-cta {
+  background-color: #ff2d75;
+  color: white;
+  border: none;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Button Sizes */
+.btn-sm {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+}
+
+.btn-lg {
+  padding: 16px 32px;
+  font-size: 1.1rem;
+}
+@keyframes cyber-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 10px rgba(77, 121, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(77, 121, 255, 0.8),
+      0 0 30px rgba(255, 45, 117, 0.3);
+  }
+}
+
+.cyber-pulse {
+  animation: cyber-pulse 3s infinite;
+}
+@keyframes pulse-slow {
+  0%,
+  100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+.animate-pulse-slow {
+  animation: pulse-slow 3s infinite;
+}
+.animation-delay-200 {
+  animation-delay: 200ms;
+}
+.animation-delay-400 {
+  animation-delay: 400ms;
+}
+.glow {
+  text-shadow: 0 0 8px rgba(77, 121, 255, 0.7);
+}
+.group:hover .glow {
+  text-shadow: 0 0 12px rgba(77, 121, 255, 0.9), 0 0 4px rgba(255, 45, 117, 0.5);
+}
+/* Add this to your global CSS */
+.active {
+  color: #4d79ff !important; /* cyber-primary */
+}
+
+.active span:last-child {
+  width: 100% !important;
+}
+
+/* Mobile active state */
+.active.mobile-menu-item {
+  border-left-color: #ff2d75 !important; /* cyber-accent */
+  padding-left: 1rem;
 }

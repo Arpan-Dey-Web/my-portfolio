@@ -48,8 +48,8 @@
             "Framer Motion",
             "TanStack Query"
         ],
-        "liveLink": "https://your-live-restaurant-site.netlify.app/",
-        "githubClient": "https://github.com/Arpan-collab/restaurant-client",
+        "liveLink": "https://epiqdine.netlify.app/",
+        "githubClient": "https://github.com/Arpan-Dey-Web/Resturent-food-project?tab=readme-ov-file",
         "githubServer": "https://github.com/Arpan-collab/restaurant-server",
         "features": [
             "🍽️ Full-featured MERN Stack Food Ordering",

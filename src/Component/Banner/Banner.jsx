@@ -1,5 +1,4 @@
 import React from "react";
-// import myimage from "/src/assets/myimage.png";
 import bannerImage from "/src/assets/bannerImage.png";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
@@ -8,61 +7,115 @@ import { Typewriter } from "react-simple-typewriter";
 
 const Banner = () => {
   return (
-    <div className="flex gap-10 md:gap-0 flex-col-reverse  md:flex-row text-center md:text-left md:justify-around items-center p-4 mb-10">
-      <div className="">
-        <h1 className="text-3xl mb-5 ">Hi,There</h1>
-        <div className="text-5xl ">
-          I am <span className="text-indigo-600 font-bold">Arpan</span>
-        </div>
-        <div className="mt-2 text-2xl ">
-          <Typewriter
-            words={[
-              "Frontend Developer",
-              "React Developer",
-              "Mern Stack Developer",
-            ]}
-            cursor
-            loop={false}
-            cursorStyle="|"
-            cursorColor="indigo"
-            typeSpeed={70}
-            deleteSpeed={50}
-            delaySpeed={1000}
-          />
-        </div>
-        <br />
-        <div className="mt-2   text-sm  md:text-base">
-          "Build. Break. Learn. Repeat" <br />
-          "Think in logic, speak in design, dream in code" <br /> "A developer
-          not by title, but by mindset"
+    <div className="background flex flex-col-reverse md:flex-row items-center justify-between px-6 py-12 md:py-24 max-w-6xl mx-auto">
+      {/* Text Content */}
+      <div className="mt-10 md:mt-0 text-center md:text-left">
+        <h1 className="text-4xl md:text-5xl font-bold mb-6">
+          <span className="text">Hi, I'm </span>
+          <span className="primary glow">Arpan</span>
+        </h1>
+
+        <div className="text-3xl md:text-4xl mb-8 h-14">
+          <span className="primary font-bold">
+            <Typewriter
+              words={[
+                "Frontend Developer",
+                "React Developer",
+                "MERN Stack Developer",
+              ]}
+              loop={false}
+              cursor
+              cursorStyle="_"
+              cursorColor="#4d79ff"
+              typeSpeed={70}
+              deleteSpeed={50}
+              delaySpeed={1500}
+            />
+          </span>
         </div>
 
-        <div className="flex justify-center  md:justify-start gap-5 mt-10">
+        <div className="text-lg text-opacity-80 mb-10 max-w-lg text">
+          <p className="mb-3">"Build. Break. Learn. Repeat"</p>
+          <p className="mb-3 ">
+            "Think In Logic, Speak In Design, Dream In Code"
+          </p>
+          <p>"A Developer Not By Title, But By Mindset"</p>
+        </div>
+
+        {/* Social Links */}
+        <div className="flex justify-center md:justify-start gap-6">
           <Link
             target="_blank"
             to={"https://www.linkedin.com/in/arpan-dey-34422a372/"}
+            className="text-3xl text hover:text-cyber-primary transition-colors glow-hover"
+            aria-label="LinkedIn"
           >
-            <FaLinkedinIn className="text-[#0077B5] text-3xl" />
+            <FaLinkedinIn />
           </Link>
-          <Link target="_blank" to={"https://github.com/Arpan-Dey-Web"}>
-            <FaGithub className="text-[#181717] text-3xl" />
+          <Link
+            target="_blank"
+            to={"https://github.com/Arpan-Dey-Web"}
+            className="text-3xl text hover:text-cyber-primary transition-colors glow-hover"
+            aria-label="GitHub"
+          >
+            <FaGithub />
           </Link>
-
           <Link
             to="mailto:arpandey.web@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
+            className="text-3xl text hover:text-cyber-primary transition-colors glow-hover"
+            aria-label="Email"
           >
-            <SiGmail className="text-[#D14836] text-3xl" />
+            <SiGmail />
           </Link>
         </div>
       </div>
-      <div className="border border-gray-400 rounded-full bg-indigo-300">
-        <img
-          className="h-[300px] md:h-[350px] lg:h-[400px]  rounded-full "
-          src={bannerImage}
-          alt=""
-        />
+
+      {/* Profile Image */}
+      <div className="relative w-fit mx-auto md:mx-0">
+        {/* Permanent Glow Layers */}
+        <div className="absolute inset-0 rounded-full -z-10">
+          <div className="absolute inset-0 bg-cyber-primary blur-lg opacity-70 animate-pulse-slow"></div>
+          <div className="absolute inset-0 bg-cyber-accent blur-md opacity-50 animate-pulse-slow animation-delay-200"></div>
+          <div className="absolute inset-0 bg-white blur-sm opacity-30 animate-pulse-slow animation-delay-400"></div>
+        </div>
+
+        {/* Image Container */}
+        <div
+          className="
+    rounded-full 
+    p-1
+    shadow-[0_0_25px_rgba(77,121,255,0.7),0_0_50px_rgba(255,45,117,0.4)]
+    bg-gradient-to-tr 
+    from-cyber-primary/20 
+    via-transparent 
+    to-cyber-accent/20
+    backdrop-blur-sm
+    border-2
+    border-transparent
+    border-opacity-30
+    hover:border-cyber-accent
+    transition-all
+    duration-300
+  "
+        >
+          <img
+            className="
+        h-[280px] w-[280px]
+        md:h-[350px] md:w-[350px]
+        lg:h-[400px] lg:w-[400px]
+        rounded-full 
+        object-cover
+        grayscale-[10%]
+        hover:grayscale-0
+        transition-all
+        duration-500
+      "
+            src={bannerImage}
+            alt="Arpan Dey - MERN Stack Developer"
+          />
+        </div>
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import React from "react";
 
 const Tool = ({ tool }) => {
     return (
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center card text">
         <img
           className="w-10 rounded-2xl "
           src={tool.skillImage}
