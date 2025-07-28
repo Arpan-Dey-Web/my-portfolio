@@ -5,7 +5,7 @@ import BackendSingleSkill from "./BackendSingleSkill";
 const Backend = () => {
   return (
     <div className="text-center">
-      <div className="grid grid-cols-3 gap-4 ">
+      <div className="grid grid-cols-3 gap-4 p-4">
         {backendSkills.map((backendSkill) => (
           <BackendSingleSkill
             key={backendSkill.id}

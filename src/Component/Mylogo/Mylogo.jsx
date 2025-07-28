@@ -4,19 +4,13 @@ import { FaAtlassian } from "react-icons/fa";
 const Mylogo = () => {
   return (
     <div className="flex items-center group gap-1">
-      {" "}
-      {/* Reduced gap */}
-      {/* Logo Icon */}
       <div
         className="text-[#4d79ff] transition-all duration-500 group-hover:text-[#ff2d75]"
         style={{ textShadow: "0 0 8px rgba(77, 121, 255, 0.7)" }}
       >
         <FaAtlassian size={28} />
       </div>
-      {/* Text - Moved closer */}
       <div className="ml-1">
-        {" "}
-        {/* Reduced margin */}
         <h1
           className="text-xl font-mono font-bold"
           style={{
@@ -30,6 +24,8 @@ const Mylogo = () => {
           rpandey.web
         </h1>
       </div>
+     
+      
     </div>
   );
 };

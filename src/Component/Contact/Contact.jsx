@@ -1,6 +1,33 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { toast, ToastContainer } from "react-toastify";
 
 const ContactPage = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_159h99k", // Your Service ID
+        "template_w1yr9dk", // Your Template ID
+        form.current,
+        "T2VZU0ZBJ3Aw1pOla" // Your Public Key
+      )
+      .then(
+        () => {
+          toast.success("✅ Message sent successfully!");
+         
+          form.current.reset();
+        },
+        (error) => {
+          toast.error("❌ Failed to send message. Please try again later.")
+          // console.error(error);
+        }
+      );
+  };
+
   return (
     <div className="background max-w-4xl mx-auto px-4 py-12">
       <div className="text-center mb-12">
@@ -42,15 +69,17 @@ const ContactPage = () => {
 
         {/* Contact Form */}
         <div className="card p-8">
-          <form>
+          <form ref={form} onSubmit={sendEmail}>
             <div className="mb-6">
               <label htmlFor="name" className="block text mb-2">
                 Your Name
               </label>
               <input
                 type="text"
+                name="user_name"
                 id="name"
                 placeholder="Mr, Chowdhury"
+                required
                 className="w-full px-4 py-2 border border-cyber-primary rounded-lg focus:outline-none focus:ring-2 focus:ring-cyber-primary background text"
               />
             </div>
@@ -61,8 +90,10 @@ const ContactPage = () => {
               </label>
               <input
                 type="email"
+                name="user_email"
                 id="email"
                 placeholder="mrchowdhury@gmail.com"
+                required
                 className="w-full px-4 py-2 border border-cyber-primary rounded-lg focus:outline-none focus:ring-2 focus:ring-cyber-primary background text"
               />
             </div>
@@ -72,9 +103,11 @@ const ContactPage = () => {
                 Message
               </label>
               <textarea
+                name="message"
                 id="message"
                 rows="4"
                 placeholder="Your message..."
+                required
                 className="w-full px-4 py-2 border border-cyber-primary rounded-lg focus:outline-none focus:ring-2 focus:ring-cyber-primary background text"
               ></textarea>
             </div>
@@ -85,6 +118,19 @@ const ContactPage = () => {
           </form>
         </div>
       </div>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+
+      />
     </div>
   );
 };

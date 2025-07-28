@@ -1,7 +1,7 @@
 import React from "react";
 import projects from "/public/Projects.json";
 import SingleProject from "./SingleProject";
-console.log(projects);
+
 const Projects = () => {
   return (
     <div className="my-10 ">

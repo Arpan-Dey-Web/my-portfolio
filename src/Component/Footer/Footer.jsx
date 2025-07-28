@@ -40,7 +40,7 @@ const Footer = () => {
               <Link
                 target="_blank"
                 to={
-                  "https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=arpan-dey-043881278"
+                  "https://www.linkedin.com/in/arpan-dey-web?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                 }
                 className="text-2xl text hover:text-cyber-primary transition-colors glow-hover p-2"
                 aria-label="LinkedIn"

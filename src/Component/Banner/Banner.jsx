@@ -46,7 +46,9 @@ const Banner = () => {
         <div className="flex justify-center md:justify-start gap-6">
           <Link
             target="_blank"
-            to={"https://www.linkedin.com/in/arpan-dey-34422a372/"}
+            to={
+              "https://www.linkedin.com/in/arpan-dey-web?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            }
             className="text-3xl text hover:text-cyber-primary transition-colors glow-hover"
             aria-label="LinkedIn"
           >
@@ -84,7 +86,7 @@ const Banner = () => {
         {/* Image Container */}
         <div
           className="
-    rounded-full 
+rounded-full 
     p-1
     shadow-[0_0_25px_rgba(77,121,255,0.7),0_0_50px_rgba(255,45,117,0.4)]
     bg-gradient-to-tr 

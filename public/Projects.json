@@ -1,6 +1,38 @@
 [
     {
         "id": 1,
+        "projecttittle": " Pet Adoption Platform",
+        "images": [
+            "https://i.ibb.co/5xh6Q034/Screenshot-2025-07-28-224654.png",
+            "https://i.ibb.co/LdtLvwfW/Screenshot-2025-07-28-224557.png"
+        ],
+        "technology": [
+            "React.js",
+            "TailwindCSS",
+            "Formik",
+            "TanStack Query",
+            "Stripe.js",
+            "JWT",
+            "Express.js",
+            "MongoDB"
+        ],
+        "liveLink": "https://pawhome.netlify.app",
+        "githubClient": "https://github.com/Arpan-Dey-Web/PetCare-Project-Client-Side",
+        "githubServer": "https://github.com/Arpan-Dey-Web/PetCare-Project-Server-Side",
+        "features": [
+            "🔒 Role-Based Auth with Firebase & JWT",
+            "💳 Stripe Integration for Donations",
+            "🧾 User Dashboard: Manage Pets, Campaigns, Adoption Requests",
+            "🛡️ Admin Dashboard: Full Platform Control",
+            "📷 Image Upload via imgbb API",
+            "📜 WYSIWYG Editor for Campaigns (Tiptap)",
+            "💫 Skeleton Loaders, Smooth Animations, Modern UI",
+            "🔍 Search, Filter, and Sort Pets by Category"
+        ],
+        "license": "Educational Use — Built with ❤️ by Arpan"
+    },
+    {
+        "id": 2,
         "projecttittle": "InnerSelf",
         "images": [
             "https://i.ibb.co/jktCh6N0/Screenshot-2025-06-30-151307.png",
@@ -17,8 +49,8 @@
             "JWT"
         ],
         "liveLink": "https://innerself.netlify.app/",
-        "githubClient": "https://github.com/Arpan-Dey-Web/Local-hobby-group-organizer-server",
-        "githubServer": "https://github.com/Arpan-collab/innerself-server",
+        "githubClient": "https://github.com/Arpan-Dey-Web/Innerself",
+        "githubServer": "https://github.com/Arpan-Dey-Web/Innerself-server",
         "features": [
             "🎭 Group Discovery & Creation",
             "🔐 Protected Routes",
@@ -30,7 +62,7 @@
         "license": "Educational Use - Crafted by Arpan ❤️"
     },
     {
-        "id": 2,
+        "id": 3,
         "projecttittle": "Restaurant Management Website",
         "images": [
             "https://i.ibb.co/nNG8N3c1/Screenshot-2025-06-30-170849.png",
@@ -54,7 +86,7 @@
         "features": [
             "🍽️ Full-featured MERN Stack Food Ordering",
             "✅ Public & Private Pages",
-            "🎨 Fully Responsive and Themed UI",
+           
             "🧾 Purchase Restriction Logic (stock, ownership)",
             "🔍 Search Functionality",
             "🧠 Smart Routing: No reload errors on Private Routes",
@@ -63,36 +95,5 @@
             "🧠 Conditional Navigation & Profile Dropdown"
         ],
         "license": "Educational Use — Built with ❤️ by Arpan"
-    },
-    {
-        "id": 3,
-        "projecttittle": "Event Explorer Platform",
-        "images": [
-            "https://i.ibb.co/VYyWDxpF/Screenshot-2025-06-30-165506.png",
-            "https://i.ibb.co/XkYnv3Pw/Screenshot-2025-06-30-165435.png"
-        ],
-        "technology": [
-            "React",
-            "Firebase Auth",
-            "Firebase Hosting",
-            "Tailwind CSS",
-            "DaisyUI",
-            "React Router",
-            "Swiper"
-        ],
-        "liveLink": "https://b11-assaignment-9.netlify.app/",
-        "githubClient": "https://github.com/Arpan-Dey-Web/Event-management-project?tab=readme-ov-file",
-        "githubServer": "",
-        "features": [
-            "🎟️ Discover and Reserve Seats for Local Events",
-            "🛡️ Protected Routes: Event Details, Profile, and One Extra Page",
-            "🔁 Auto-login with onAuthStateChanged on Refresh",
-            "🖼️ Home Page: Swiper Slider, Upcoming Events, FAQ Section",
-            "👤 Profile Page: Update Name and Photo via Firebase",
-            "➕ Extra Protected Route with Meaningful Content",
-            "🎨 Fully Responsive Urban-Themed Design",
-            "🌀 AOS Animations, Hover Effects, and Polished Transitions"
-        ],
-        "license": "Educational Use — Crafted by Arpan ❤️"
     }
 ]
