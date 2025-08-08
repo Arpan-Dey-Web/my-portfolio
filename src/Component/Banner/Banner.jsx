@@ -6,14 +6,17 @@ import { Link } from "react-router";
 import { Typewriter } from "react-simple-typewriter";
 
 const Banner = () => {
+  <script>AOS.init();</script>;
   return (
     <div className="background flex flex-col-reverse md:flex-row items-center justify-between px-6 py-12 md:py-24 max-w-6xl mx-auto">
       {/* Text Content */}
       <div className="mt-10 md:mt-0 text-center md:text-left">
         <h1 className="text-4xl md:text-5xl font-bold mb-6">
           <span className="text">Hi, I'm </span>
-          <span className="primary glow">Arpan</span>
+          <span className="primary glow">Arpan Dey</span>
         </h1>
+
+        {/* <div data-aos="fade-up" data-aos-anchor-placement="center-center"></div> */}
 
         <div className="text-3xl md:text-4xl mb-8 h-14">
           <span className="primary font-bold">
@@ -34,7 +37,7 @@ const Banner = () => {
           </span>
         </div>
 
-        <div className="text-lg text-opacity-80 mb-10 max-w-lg text">
+        <div className="text-lg text-opacity-80 mb-10 max-w-xl text ">
           <p className="mb-3">"Build. Break. Learn. Repeat"</p>
           <p className="mb-3 ">
             "Think In Logic, Speak In Design, Dream In Code"

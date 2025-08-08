@@ -1,4 +1,5 @@
 import React from "react";
+import Lenis from "lenis";
 import Navbar from "../Component/Navbar/Navbar";
 import Banner from "../Component/Banner/Banner";
 import AboutMe from "../Component/AboutMe/AboutMe";
@@ -9,6 +10,13 @@ import Footer from "../Component/Footer/Footer";
 import ClickSpark from "./ClickAnimation/ClickSpark";
 
 const Home = () => {
+  // Initialize Lenis
+  const lenis = new Lenis({
+    autoRaf: true,
+  });
+
+  // Listen for the scroll event and log the event data
+  lenis.on("scroll", () => {});
   return (
     <ClickSpark
       sparkColor="#fff"
@@ -17,9 +25,8 @@ const Home = () => {
       sparkCount={8}
       duration={400}
     >
-      
-        <Navbar />
-    
+      <Navbar />
+
       <div className="mx-auto max-w-7xl w-11/12">
         <section id="home" className="border-b-2 border-indigo-500">
           <Banner />

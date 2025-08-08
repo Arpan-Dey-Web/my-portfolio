@@ -15,7 +15,7 @@ const AboutMe = () => {
       </header>
 
       <article>
-        <p className=" leading-relaxed text-lg tracking-wide text-center text ">
+        <p className=" leading-relaxed text-lg tracking-wide  text text-justify ">
           I am Arpan, a dedicated developer who embraces every new technology
           with calm confidence. My approach is simple: learn relentlessly, code
           thoughtfully, and deliver excellence. I see every challenge as a
