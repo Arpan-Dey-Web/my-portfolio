@@ -6,7 +6,15 @@ import { Link } from "react-router";
 import { Typewriter } from "react-simple-typewriter";
 
 const Banner = () => {
-  <script>AOS.init();</script>;
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/resume.pdf";
+    link.setAttribute("download", "ArpanDey_Resume.pdf");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="background flex flex-col-reverse md:flex-row items-center justify-between px-6 py-12 md:py-24 max-w-6xl mx-auto">
       {/* Text Content */}
@@ -15,8 +23,6 @@ const Banner = () => {
           <span className="text">Hi, I'm </span>
           <span className="primary glow">Arpan Dey</span>
         </h1>
-
-        {/* <div data-aos="fade-up" data-aos-anchor-placement="center-center"></div> */}
 
         <div className="text-3xl md:text-4xl mb-8 h-14">
           <span className="primary font-bold">
@@ -74,6 +80,26 @@ const Banner = () => {
           >
             <SiGmail />
           </Link>
+        </div>
+
+        <div className="mt-10 rounded-full flex gap-6 ">
+          {/* contact */}
+          <button
+            className="btn rounded-full btn-secondary px-8 py-2 bg-[#DE2A8A] glow glow-hover"
+            onClick={() => {
+              document.getElementById("contact")?.scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
+          >
+            Contact Now
+          </button>
+          <button
+            onClick={handleDownload}
+            className="btn rounded-full  text-white bg-gray-600 glow glow-hover rounded-6xl  px-8 py-2"
+          >
+            Download CV
+          </button>
         </div>
       </div>
 

@@ -1,20 +1,21 @@
 [
     {
         "id": 1,
-        "projecttittle": " Pet Adoption Platform",
+        "projecttittle": "Pet Adoption Platform",
+        "ProjectLogo": "https://i.ibb.co/d4FJcpGW/Paw-s-Home-Logo-with-Vibrant-Compassionate-Design.png",
+        "ProjectDescription" :" Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, accusantium voluptatum doloribus rem facilis nisi ad praesentium a dignissimos saepe amet quaerat illum autem consectetur, soluta cupiditate magnam molestias fugit.",
         "images": [
             "https://i.ibb.co/5xh6Q034/Screenshot-2025-07-28-224654.png",
             "https://i.ibb.co/LdtLvwfW/Screenshot-2025-07-28-224557.png"
         ],
         "technology": [
-            "React.js",
-            "TailwindCSS",
-            "Formik",
-            "TanStack Query",
-            "Stripe.js",
+            "React",
+            "Express",
+            "MongoDB",
+            "Stripe",
             "JWT",
-            "Express.js",
-            "MongoDB"
+            "Tailwind",
+            "TanStack Query"
         ],
         "liveLink": "https://pawhome.netlify.app",
         "githubClient": "https://github.com/Arpan-Dey-Web/PetCare-Project-Client-Side",
@@ -34,17 +35,18 @@
     {
         "id": 2,
         "projecttittle": "InnerSelf",
+        "ProjectLogo": "https://i.ibb.co.com/GgH2WsF/logo-Cfe-MJKe-K.png",
+        "ProjectDescription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, accusantium voluptatum doloribus rem facilis nisi ad praesentium a dignissimos saepe amet quaerat illum autem consectetur, soluta cupiditate magnam molestias fugit.",
         "images": [
             "https://i.ibb.co/jktCh6N0/Screenshot-2025-06-30-151307.png",
             "https://i.ibb.co/nVsrf7C/Screenshot-2025-06-30-151238.png",
             "https://i.ibb.co/bMCXc8fB/Screenshot-2025-06-30-151149.png"
         ],
         "technology": [
-            "ReactJS",
-            "Tailwind CSS",
-            "Firebase Auth",
+            "React",
             "MongoDB",
-            "ExpressJS",
+            "Express",
+            "Tailwind",
             "React Router",
             "JWT"
         ],
@@ -63,21 +65,20 @@
     },
     {
         "id": 3,
-        "projecttittle": "Restaurant Management Website",
+        "projecttittle": "Restaurant Management ",
+        "ProjectLogo": "https://i.ibb.co.com/Kn84qhY/Logo-Bn-CCn-BOX.png",
+        "ProjectDescription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, accusantium voluptatum doloribus rem facilis nisi ad praesentium a dignissimos saepe amet quaerat illum autem consectetur, soluta cupiditate magnam molestias fugit.",
         "images": [
             "https://i.ibb.co/nNG8N3c1/Screenshot-2025-06-30-170849.png",
             "https://i.ibb.co/zTY660vX/Screenshot-2025-06-30-170818.png"
         ],
         "technology": [
-            "ReactJS",
-            "Tailwind CSS",
-            "React Router",
-            "Firebase Auth",
-            "Node.js",
-            "Express.js",
+            "React",
+            "Express",
             "MongoDB",
-            "JWT",
+            "Tailwind",
             "Framer Motion",
+            "JWT",
             "TanStack Query"
         ],
         "liveLink": "https://epiqdine.netlify.app/",
@@ -86,7 +87,6 @@
         "features": [
             "🍽️ Full-featured MERN Stack Food Ordering",
             "✅ Public & Private Pages",
-           
             "🧾 Purchase Restriction Logic (stock, ownership)",
             "🔍 Search Functionality",
             "🧠 Smart Routing: No reload errors on Private Routes",

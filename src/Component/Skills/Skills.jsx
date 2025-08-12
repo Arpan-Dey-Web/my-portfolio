@@ -3,9 +3,10 @@ import Frontend from "./Frontend";
 import Backend from "./Backend";
 import OtherSkills from "./OtherSkills";
 
+
 const Skills = () => {
   return (
-    <div className="mt-10 card">
+    <div className="mt-10 ">
       <div className="text-center">
         <h1 className="text-3xl font-bold primary md:text-5xl my-5">Stack & Skills </h1>
         <p className="w-11/12 md:w-6/12 mx-auto text">

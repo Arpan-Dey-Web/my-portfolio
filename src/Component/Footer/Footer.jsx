@@ -6,7 +6,7 @@ import Mylogo from "../Mylogo/Mylogo";
 const Footer = () => {
   return (
     <div className="background">
-      <footer className="max-w-6xl mx-auto p-8 ">
+      <footer className="max-w-7xl  w-11/12 mx-auto py-8 ">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           {/* Logo & Copyright */}
           <aside className="flex flex-col items-center md:items-start">

@@ -77,10 +77,10 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Download Button */}
-          <div className="ml-4 hidden md:block">
+          <div className=" hidden md:block">
             <button
               onClick={handleDownload}
-              className="btn btn-accent glow-hover px-6 py-2 rounded-md font-medium transition-all hover:scale-105"
+              className="btn rounded-full btn-secondary px-8 py-2 bg-[#DE2A8A] glow glow-hover"
             >
               Download CV
             </button>

@@ -10,19 +10,18 @@ const ContactPage = () => {
 
     emailjs
       .sendForm(
-        "service_159h99k", // Your Service ID
-        "template_w1yr9dk", // Your Template ID
+        import.meta.env.VITE_service_id, 
+        import.meta.env.VITE_template_id, 
         form.current,
-        "T2VZU0ZBJ3Aw1pOla" // Your Public Key
+         import.meta.env.VITE_Public_Key 
       )
       .then(
         () => {
           toast.success("✅ Message sent successfully!");
-         
           form.current.reset();
         },
         (error) => {
-          toast.error("❌ Failed to send message. Please try again later.")
+          toast.error("❌ Failed to send message. Please try again later.");
           // console.error(error);
         }
       );

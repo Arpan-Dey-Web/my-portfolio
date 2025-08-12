@@ -1,8 +1,14 @@
-import React from "react";
-import backendSkills from "/public/backendSkill.json";
+import React, { useEffect, useState } from "react";
 import BackendSingleSkill from "./BackendSingleSkill";
 
 const Backend = () => {
+  const [backendSkills, setBackendSkills] = useState([]);
+  useEffect(() => {
+    fetch("/frontendSkill.json")
+      .then((res) => res.json())
+      .then((data) => setBackendSkills(data))
+      .catch((err) => setBackendSkills([]));
+  }, []);
   return (
     <div className="text-center">
       <div className="grid grid-cols-3 gap-4 p-4">
