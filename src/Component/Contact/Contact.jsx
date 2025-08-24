@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { toast, ToastContainer } from "react-toastify";
+import { Link } from "react-router";
 
 const ContactPage = () => {
   const form = useRef();
@@ -28,9 +29,9 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="background max-w-4xl mx-auto px-4 py-12">
+    <div className=" max-w-4xl mx-auto px-4 py-12">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold primary mb-4 glow">Get in Touch</h1>
+        <h1 className="text-4xl font-bold primary mb-4 ">Get in Touch</h1>
         <p className="text-lg text">
           I'm open to collaborations, opportunities, or just a friendly chat.
         </p>
@@ -38,14 +39,15 @@ const ContactPage = () => {
 
       <div className="grid md:grid-cols-2 gap-8">
         {/* Contact Information */}
-        <div className="card p-8">
-          <h2 className="text-2xl font-semibold primary mb-4 glow">
+        <div className="card p-8 flex flex-col  justify-center" >
+          <h2 className="text-2xl font-semibold primary mb-4 ">
             Arpan Dey
           </h2>
           <p className="text mb-6">
-            A passionate MERN stack developer from Chittagong, Bangladesh,
-            dedicated to building real-world solutions through clean and
-            efficient code.
+            MERN stack developer
+            <br />
+            Chittagong, Bangladesh,
+            
           </p>
 
           <div className="space-y-4">
@@ -55,14 +57,14 @@ const ContactPage = () => {
               <p className="text">+880 1821524847</p>
             </div>
 
-            <a
-              href="https://wa.me/8801821524847"
+            <Link
+              to="https://wa.me/8801821524847"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-primary glow-hover"
+              className="btn btn-outline btn-accent glow-hover"
             >
               Chat on WhatsApp
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -111,7 +113,10 @@ const ContactPage = () => {
               ></textarea>
             </div>
 
-            <button type="submit" className="btn btn-accent glow-hover w-full">
+            <button
+              type="submit"
+              className="btn rounded-full  text-white bg-gray-600 glow glow-hover rounded-6xl  px-8 py-2 glow-hover w-full"
+            >
               Send Message
             </button>
           </form>
@@ -128,7 +133,6 @@ const ContactPage = () => {
         draggable
         pauseOnHover
         theme="dark"
-
       />
     </div>
   );

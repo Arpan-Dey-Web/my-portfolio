@@ -16,15 +16,20 @@ const Banner = () => {
   };
 
   return (
-    <div className="background flex flex-col-reverse md:flex-row items-center justify-between px-6 py-12 md:py-24 max-w-6xl mx-auto">
+    <div className="background flex flex-col-reverse lg:flex-row items-center justify-between px-6 py-12 md:py-24 max-w-6xl mx-auto">
       {/* Text Content */}
       <div className="mt-10 md:mt-0 text-center md:text-left">
-        <h1 className="text-4xl md:text-5xl font-bold mb-6">
-          <span className="text">Hi, I'm </span>
-          <span className="primary glow">Arpan Dey</span>
-        </h1>
+        <div className=" md:text-5xl font-bold mb-6">
+          <span className="text-white text-2xl md:text-3xl mb-6 ">
+            Hello, I'm{" "}
+          </span>{" "}
+          <br />
+          <h1 className="primary  text-4xl md:text-5xl lg:text-6xl  mt-6">
+            Arpan Dey
+          </h1>
+        </div>
 
-        <div className="text-3xl md:text-4xl mb-8 h-14">
+        <div className="text-2xl md:text-4xl mb-8 h-14">
           <span className="primary font-bold">
             <Typewriter
               words={[
@@ -58,7 +63,7 @@ const Banner = () => {
             to={
               "https://www.linkedin.com/in/arpan-dey-web?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
             }
-            className="text-3xl text hover:text-cyber-primary transition-colors glow-hover"
+            className="text-3xl text hover:text-cyber-primary transition-colors social-link p-2 rounded-lg"
             aria-label="LinkedIn"
           >
             <FaLinkedinIn />
@@ -66,7 +71,7 @@ const Banner = () => {
           <Link
             target="_blank"
             to={"https://github.com/Arpan-Dey-Web"}
-            className="text-3xl text hover:text-cyber-primary transition-colors glow-hover"
+            className="text-3xl text hover:text-cyber-primary transition-colors social-link p-2 rounded-lg"
             aria-label="GitHub"
           >
             <FaGithub />
@@ -75,7 +80,7 @@ const Banner = () => {
             to="mailto:arpandey.web@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-3xl text hover:text-cyber-primary transition-colors glow-hover"
+            className="text-3xl text hover:text-cyber-primary transition-colors social-link p-2 rounded-lg"
             aria-label="Email"
           >
             <SiGmail />
@@ -116,7 +121,7 @@ const Banner = () => {
         <div
           className="
 rounded-full 
-    p-1
+    
     shadow-[0_0_25px_rgba(77,121,255,0.7),0_0_50px_rgba(255,45,117,0.4)]
     bg-gradient-to-tr 
     from-cyber-primary/20 
@@ -129,6 +134,7 @@ rounded-full
     hover:border-cyber-accent
     transition-all
     duration-300
+    
   "
         >
           <img
@@ -141,7 +147,7 @@ rounded-full
         grayscale-[10%]
         hover:grayscale-0
         transition-all
-        duration-500
+        duration-500 
       "
             src={bannerImage}
             alt="Arpan Dey - MERN Stack Developer"

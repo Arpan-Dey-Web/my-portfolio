@@ -65,7 +65,7 @@ const Navbar = () => {
                     key={item}
                     to={item}
                     {...scrollProps}
-                    className="text uppercase text-sm font-medium px-3 py-2 relative group cursor-pointer transition-all duration-300"
+                    className="text capitalize text-sm font-medium px-3 py-2 relative group cursor-pointer transition-all duration-300"
                   >
                     {item}
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-cyber-primary transition-all duration-300 group-hover:w-full"></span>

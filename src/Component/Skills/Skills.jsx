@@ -18,7 +18,7 @@ const Skills = () => {
         </p>
       </div>
 
-      <div className="my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="my-10 grid grid-cols-1  lg:grid-cols-3  mx-auto">
         {/* frontend skills */}
         <div className="flex flex-col text-center  p-4">
           <h1 className="mb-5 text-xl font-semibold accent">Frontend</h1>

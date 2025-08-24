@@ -8,9 +8,9 @@ import Projects from "../Component/Projects/Projects";
 import Contact from "../Component/Contact/Contact";
 import Footer from "../Component/Footer/Footer";
 import ClickSpark from "./ClickAnimation/ClickSpark";
+import Loading from "../Component/Loading/Loading";
 
 const Home = () => {
-
   return (
     <ClickSpark
       sparkColor="#fff"
@@ -23,6 +23,9 @@ const Home = () => {
         <section id="home" className="border-b-2 border-indigo-500">
           <Banner />
         </section>
+
+        
+
         <section id="about">
           <AboutMe />
         </section>

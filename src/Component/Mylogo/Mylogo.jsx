@@ -10,7 +10,7 @@ const Mylogo = () => {
       >
         <FaAtlassian size={28} />
       </div>
-      <div className="ml-1">
+      <div className="">
         <h1
           className="text-xl font-mono font-bold"
           style={{
@@ -21,11 +21,9 @@ const Mylogo = () => {
             textShadow: "0 0 8px rgba(77, 121, 255, 0.3)",
           }}
         >
-          rpandey.web
+          rpan
         </h1>
       </div>
-     
-      
     </div>
   );
 };

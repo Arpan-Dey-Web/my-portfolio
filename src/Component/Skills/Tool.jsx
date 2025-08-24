@@ -9,7 +9,7 @@ const Tool = ({ tool }) => {
           alt={tool.skillName}
         />
 
-        <h1 className="mt-4">{tool.skillName}</h1>
+        <h1 className="mt-4 font-mono">{tool.skillName}</h1>
       </div>
     );
 };

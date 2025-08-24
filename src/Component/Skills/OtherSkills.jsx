@@ -4,7 +4,7 @@ const OtherSkills = () => {
   const [otherTools, setOtherTools] = useState([]);
 
   useEffect(() => {
-    fetch("/frontendSkill.json")
+    fetch("/otherTools.json")
       .then((res) => res.json())
       .then((data) => setOtherTools(data))
       .catch((err) => setOtherTools([]));

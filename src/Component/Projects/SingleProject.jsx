@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { FiExternalLink } from "react-icons/fi";
-import { useParams } from "react-router";
+import { Link, useNavigate, useParams } from "react-router";
 import { FaGithub } from "react-icons/fa";
+import { motion } from "framer-motion";
 const SingleProject = () => {
   const { id } = useParams();
-
-  const [project, setProject] = useState({});
+  const navigate = useNavigate();
+  const [project, setProject] = useState([]);
   useEffect(() => {
     fetch("/Projects.json")
       .then((res) => res.json())
@@ -13,7 +14,7 @@ const SingleProject = () => {
         const found = data.find((item) => item.id === parseInt(id));
         setProject(found);
       })
-      .catch((err) => setProject({}));
+      .catch((err) => setProject([]));
   }, [id]);
 
   const {
@@ -26,156 +27,137 @@ const SingleProject = () => {
     license,
     images,
     ProjectLogo,
+    ProjectBestPageImage,
     ProjectDescription,
+    ProjectBannerImages,
+    challengeFaces,
+    futurePlans,
   } = project;
-  console.log(technology);
-  return (
-    <div className="my-20">
-      <h1 className="text-white text-center text-4xl font-bold">
-        {projecttittle}
-      </h1>
-      <p className="text-white w-2xl mx-auto  text-center mt-5">
-        {ProjectDescription}
-      </p>
-      <div className="text-center  grid grid-cols-3 gap-4 w-2xl mx-auto mt-5  ">
-        {technology?.map((tech, index) => (
-          <button className="btn btn-primary" key={index}>
-            {tech}
-          </button>
-        ))}
-      </div>
-      <div className="flex justify-center gap-4 mt-5">
-        <button className=" text-white flex gap-1 items-center justify-center border rounded-full px-6 py-2 ">
-          <FiExternalLink />
-          Live Demo
-        </button>
 
-        <button className=" text-white flex gap-1 items-center justify-center border rounded-full px-6 py-2 ">
-          <FaGithub />
-          Live Demo
-        </button>
+  if (project?.length == 0) {
+    return <div>Nothing to show</div>;
+  }
+
+  return (
+    <div className="my-5 ">
+      <button
+        onClick={() => navigate(-1)}
+        className="px-8 py-2 bg-gray-700 text-white rounded-full hover:bg-gray-600"
+      >
+        ⬅ Back To Home Page
+      </button>
+      ;
+      <div className="my-20 w-11/12 mx-auto">
+        <h1 className="text-white text-center text-4xl font-bold mb-5">
+          Project: {projecttittle}
+        </h1>
+
+        <p className="text-white md:w-2xl mx-auto  text-center mt-5">
+          {ProjectDescription}
+        </p>
+        <div className=" grid grid-cols-3 md:grid-cols-6  gap-4  text-center  mx-auto my-5 text-wrap ">
+          {technology?.map((tech, index) => (
+            <span
+              className="text-white  font-medium px-2 py-2 rounded-full bg-black card"
+              key={index}
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+        <div>
+          {ProjectBestPageImage?.length !== 0 && (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 ">
+              <div className="w-full h-68 overflow-hidden mb-5 rounded-2xl ">
+                <motion.img
+                  src={ProjectBestPageImage[0] ? ProjectBestPageImage[0] : ""}
+                  alt="Project"
+                  className="w-full"
+                  initial={{ y: 0 }}
+                  whileHover={{ y: -1100 }} // adjust based on image height
+                  transition={{ duration: 4, ease: "easeInOut" }} // smoothness
+                />
+              </div>
+
+              <div className="w-full h-68 overflow-hidden mb-5 rounded-2xl">
+                <motion.img
+                  src={ProjectBestPageImage[1] ? ProjectBestPageImage[1] : ""}
+                  alt="Project"
+                  className="w-full "
+                  initial={{ y: 0 }}
+                  whileHover={{ y: -1000 }} // adjust based on image height
+                  transition={{ duration: 4, ease: "easeInOut" }} // smoothness
+                />
+              </div>
+
+              <div className="w-full h-68 mb-10 rounded-2xl  ">
+                <img
+                  src={ProjectBestPageImage[2] ? ProjectBestPageImage[2] : ""}
+                  alt="Project"
+                  className="w-full rounded-2xl h-68"
+                />
+              </div>
+
+              <div className="w-full h-68  mb-10 rounded-2xl ">
+                <img
+                  src={ProjectBestPageImage[3] ? ProjectBestPageImage[3] : ""}
+                  alt="Project"
+                  className="w-full rounded-2xl h-68 "
+                />
+              </div>
+            </div>
+          )}
+        </div>
+
+        <div className="flex justify-center gap-4 my-5">
+          <Link to={liveLink} target="_blank">
+            <button className="btn  btn-secondary  bg-[#DE2A8A] glow glow-hover text-white flex gap-1 items-center justify-center border rounded-full px-6 py-2 ">
+              <FiExternalLink />
+              Live Demo
+            </button>
+          </Link>
+
+          <Link to={githubClient} target="_blank">
+            <button className="btn   bg-gray-600 glow glow-hover  text-white flex gap-1 items-center justify-center border rounded-full px-6 py-2 ">
+              <FaGithub />
+              Client Code
+            </button>
+          </Link>
+        </div>
+
+        {/*  Features list  */}
+        <div>
+          <h3 className="font-semibold mb-1  text-white ">🚀 Features:</h3>
+          <hr className="border border-white my-2 w-2xs" />
+          <ul className=" list-inside  text-sm space-y-1 list-none text-white">
+            {features?.map((feature, idx) => (
+              <li key={idx}>{feature}</li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="my-5">
+          <h2 className="text-white font-semibold"> 🎯 Challange I face </h2>
+          <hr className="border border-white my-2 w-2xs" />
+          <ul className="text-white">
+            {challengeFaces?.map((challenges, index) => (
+              <li key={index}> ✅ {challenges} </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="text-white">
+          <h2 className="font-semibold">🛠 Future Plans</h2>
+          <hr className="border border-white my-2 w-2xs" />
+          <ul>
+            {futurePlans?.map((plans, index) => (
+              <li key={index}>🚩 {plans}</li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
 };
 
 export default SingleProject;
-
-//  <div className="bg-gray-900 rounded-2xl shadow-lg overflow-hidden border card transition duration-300 flex flex-col lg:flex-row h-full mb-10">
-{
-  /* Project image slider - fixed height container */
-}
-{
-  /* <div className="lg:w-2/5 w-full  flex-shrink-0 overflow-hidden p-4">
-  <Swiper
-    modules={[Pagination, Autoplay]}
-    spaceBetween={0}
-    slidesPerView={1}
-    loop={true}
-    autoplay={{
-      delay: 3000,
-      disableOnInteraction: false,
-    }}
-    pagination={{
-      clickable: true,
-      dynamicBullets: true,
-    }}
-    className="h-full w-full  "
-  >
-    {images.map((image, index) => (
-      <SwiperSlide key={index}>
-        <img
-          src={image}
-          alt={`${projecttittle} - Screenshot ${index + 1}`}
-          className="h-full w-full rounded-2xl object-cover"
-          loading="lazy"
-        />
-      </SwiperSlide>
-    ))}
-  </Swiper>
-</div>; */
-}
-
-{
-  /* Project content - flexible height */
-}
-{
-  /* <div className="lg:w-3/5 w-full p-6 flex flex-col h-full overflow-auto">
-  <div className="space-y-4">
-    <h2 className="text-2xl font-bold primary text-center">
-      <span className="text-white">Project :</span> {projecttittle}
-    </h2> */
-}
-
-{
-  /* Tech badges */
-}
-// <div className="grid grid-cols-4 gap-2">
-//   {technology.map((tech, index) => (
-//     <span
-//       key={index}
-//       className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text text-sm rounded-full"
-//     >
-//       {tech}
-//     </span>
-//   ))}
-// </div>
-
-{
-  /* Features list */
-}
-//   <div>
-//     <h3 className="font-semibold mb-1 text-gray-800 dark:text-gray-200">
-//       🚀 Features:
-//     </h3>
-//     <ul className="list-disc list-inside text dark:text-gray-300 text-sm space-y-1">
-//       {features.map((feature, idx) => (
-//         <li key={idx}>{feature}</li>
-//       ))}
-//     </ul>
-//   </div>
-// </div>
-
-{
-  /* Links and License - pushed to bottom */
-}
-// <div className="mt-auto pt-4">
-//   <div className="flex flex-wrap gap-3 pt-2 border-t border-gray-200 dark:border-gray-700">
-//     {liveLink && (
-//       <a
-//         href={liveLink}
-//         target="_blank"
-//         rel="noopener noreferrer"
-//         className="button-primary glow  transition-colors  rounded-full  text-white bg-gray-600 glow glow-hover rounded-6xl  px-4 py-2"
-//       >
-//         <span>🌐</span>Live
-//       </a>
-//     )}
-//     {githubClient && (
-//       <a
-//         href={githubClient}
-//         target="_blank"
-//         rel="noopener noreferrer"
-//         className="button rounded-full btn-secondary px-4 py-2 bg-[#DE2A8A] glow glow-hover transition-colors text-white"
-//       >
-//         <span>💻</span> Client Code
-//       </a>
-//     )}
-{
-  /* {githubServer && (
-              <a
-                href={githubServer}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 bg-gray-800 hover:bg-black text-white rounded-md transition-colors flex items-center gap-1"
-              >
-                <span>🔌</span> Server Code
-              </a>
-            )} */
-}
-//     </div>
-//   </div>
-// </div>;
-// {
-/* </div>; */
-// }
